@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="hbp">
+            <div class="heading">
+                <p class="header"> Generate a <span>random password</span></p>
+                <p class="supporting-text">Never use an insecure password again.</p>
+            </div>
+            <div class="button">
+                <input type="number" value="" id="password-length" placeholder="Min-5, Max-20">
+                <button id="gen-password" onclick="getAllPasswords()">Generate Passwords</button>
+            </div>
+            <hr>
+            <div class="passwords">
+                <p class="supporting-text">Click Password to copy</p>
+                <div class="first-row">
+                    <input type="text" placeholder="..." id="first-password" readonly onclick="copyElement(this.id)">
+                    <input type="text" placeholder="..." id="second-password" onclick="copyElement(this.id)" readonly>
+                </div>
+                <div class="second-row">
+                    <input type="text" placeholder="..." id="third-password" readonly onclick="copyElement(this.id)">
+                    <input type="text" placeholder="..." id="fourth-password" readonly onclick="copyElement(this.id)">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
